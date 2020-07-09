@@ -35,12 +35,13 @@ public class TextClassificationService {
 
         System.out.println("data size:"+data.size());//data size:3082
         for (String s:data){
-            System.out.print("水泥"+'\t'+s+'\n');
-            sb.append("水泥"+'\t'+s+'\n');
+         //   System.out.print("水泥"+'\t'+s+'\n');
+            System.out.println(s);
+            sb.append(s+'\n');
         }
         File f=new File(datapath,"cement.txt");
         try {
-            BufferedWriter out = new BufferedWriter(new FileWriter(f,true));
+            BufferedWriter out = new BufferedWriter(new FileWriter(f));
             out.write(sb.toString());
             out.flush();
         } catch (IOException e) {
