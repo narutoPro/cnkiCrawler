@@ -33,6 +33,7 @@ public class JsoupConnectDemo {
                         .header("User-Agent", usa)
                         .get();
                 System.out.println("获取数据: " + curpage + " :");
+                System.out.println(document.title());
 
             } catch (IOException e) {
                 e.printStackTrace();
